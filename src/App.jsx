@@ -6,7 +6,7 @@ import AnalyticsIcon from '@mui/icons-material/Analytics';
 import CategoryIcon from '@mui/icons-material/Category';
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import SettingsIcon from '@mui/icons-material/Settings';
-import useI18nStore from './i18n/i18n.js';
+import useI18nStore from './stores/i18n.js';
 import MusicBox from './layout/MusicBox.jsx';
 
 function App() {

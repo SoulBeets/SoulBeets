@@ -1,4 +1,4 @@
-import { Box, Icon, Snackbar, Zoom } from "@mui/material";
+import { Box, Snackbar, Zoom } from "@mui/material";
 import ShuffleIcon from "@mui/icons-material/Shuffle";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import RepeatOneIcon from "@mui/icons-material/RepeatOne";
@@ -6,10 +6,12 @@ import PlaylistPlayIcon from "@mui/icons-material/PlaylistPlay";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { PlatformTag, QualityTag } from "@/components/source";
 
 export default function MusicBox() {
   // TODO: @bbangqian 添加播放 封面旋转的代码
 
+  // region: MusicMode start
   const [mode, setMode] = useState("repeat");
   const [repeatShow, setRepeatShow] = useState(false);
   const [repeatoneShow, setRepeatoneShow] = useState(false);
@@ -56,6 +58,7 @@ export default function MusicBox() {
     clearTimeout(closeSnackbarTimer);
     closeSnackbarTimer = setTimeout(() => setSnackbarOpen(false), 800);
   }, [mode, setMode]);
+  // region: MusicMode end
 
   return (
     <>
@@ -78,13 +81,13 @@ export default function MusicBox() {
               <Box
                 fontSize="0.8em"
                 width="220px"
+                display="flex"
                 gap="4px"
                 alignItems="center"
-                whiteSpace="nowrap"
-                overflow="hidden"
-                textOverflow="ellipsis"
               >
-                华晨宇 - 新世界New World
+                <Box>华晨宇</Box>
+                <Box>{PlatformTag("WYY")}</Box>
+                <Box>{QualityTag("WYY", "超清母带")}</Box>
               </Box>
             </Box>
           </Box>

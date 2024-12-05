@@ -31,7 +31,7 @@ const sources = [
 ];
 const supports = sources.map((source) => source.name);
 
-const tagStyle = { color: "#ffffff", fontSize: "10px" };
+const tagStyle = { color: "#ffffff", fontSize: "10px", padding: "2px 4px", maxWidth: "fit-content", borderRadius: 4 };
 
 export const Quality = (platform) => {
   if (!supports.includes(platform)) platform = "ETC";
@@ -42,26 +42,14 @@ export const PlatformTag = (platform) => {
   if (!supports.includes(platform)) platform = "ETC";
   const color = sources.find((s) => s.name === platform).color;
 
-  return (
-    <Chip
-      style={{ ...tagStyle, backgroundColor: color }}
-      size="small"
-      label={platform}
-    />
-  );
+  return <div style={{ ...tagStyle, backgroundColor: color }}>{platform}</div>;
 };
 
 export const QualityTag = (platform, quality) => {
   if (!supports.includes(platform)) platform = "ETC";
   const color = sources.find((s) => s.name === platform).color;
 
-  return (
-    <Chip
-      style={{ ...tagStyle, backgroundColor: color }}
-      size="small"
-      label={quality}
-    />
-  );
+  return <div style={{ ...tagStyle, backgroundColor: color }}>{quality}</div>;
 };
 
 export const PlatformQualityTag = (platform, quality) => {
@@ -69,10 +57,8 @@ export const PlatformQualityTag = (platform, quality) => {
   const color = sources.find((s) => s.name === platform).color;
 
   return (
-    <Chip
-      style={{ ...tagStyle, backgroundColor: color }}
-      size="small"
-      label={platform + " " + quality}
-    />
+    <div style={{ ...tagStyle, backgroundColor: color }}>
+      {platform + " " + quality}
+    </div>
   );
 };
