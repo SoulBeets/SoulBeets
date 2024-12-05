@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="logo-48" height="48" width="48" viewBox="0 0 48 48"
+   style="width: 48px; height: 48px;"
+   fill="none"
+   version="1.1"
+   sodipodi:docname="favicon.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+   <defs>
+      <style>
+         @font-face {
+         font-family: "SimpleNote";
+         src: url("/Mocosans-SimpleNote.ttf");
+         }
+      </style>
+   </defs>
+   <rect x="0" y="0" width="48" height="48" fill="#6c35de"></rect>
+   <rect x="4.800000000000001" y="19.8" width="1.6991150442477878" height="8.399999999999999"
+      rx="1.40625" ry="1.40625" fill="#342a45"></rect>
+   <rect x="7.858407079646019" y="15.600000000000001" width="1.6991150442477878"
+      height="16.799999999999997" rx="1.40625" ry="1.40625" fill="#342a45"></rect>
+   <rect x="10.916814159292038" y="11.400000000000002" width="1.6991150442477878"
+      height="25.199999999999996" rx="1.40625" ry="1.40625" fill="#342a45"></rect>
+   <rect x="13.975221238938055" y="15.600000000000001" width="1.6991150442477878"
+      height="16.799999999999997" rx="1.40625" ry="1.40625" fill="#342a45"></rect>
+   <rect x="17.03362831858407" y="19.8" width="1.6991150442477878" height="8.399999999999999"
+      rx="1.40625" ry="1.40625" fill="#342a45"></rect>
+   <rect x="20.09203539823009" y="15.600000000000001" width="1.6991150442477878"
+      height="16.799999999999997" rx="1.40625" ry="1.40625" fill="#342a45"></rect>
+   <rect x="23.15044247787611" y="11.400000000000002" width="1.6991150442477878"
+      height="25.199999999999996" rx="1.40625" ry="1.40625" fill="#342a45"></rect>
+   <rect x="26.20884955752213" y="7.200000000000003" width="1.6991150442477878"
+      height="33.599999999999994" rx="1.40625" ry="1.40625" fill="#342a45"></rect>
+   <rect x="29.267256637168146" y="11.400000000000002" width="1.6991150442477878"
+      height="25.199999999999996" rx="1.40625" ry="1.40625" fill="#342a45"></rect>
+   <rect x="32.32566371681416" y="15.600000000000001" width="1.6991150442477878"
+      height="16.799999999999997" rx="1.40625" ry="1.40625" fill="#342a45"></rect>
+   <rect x="35.38407079646018" y="11.400000000000002" width="1.6991150442477878"
+      height="25.199999999999996" rx="1.40625" ry="1.40625" fill="#342a45"></rect>
+   <rect x="38.442477876106196" y="15.600000000000001" width="1.6991150442477878"
+      height="16.799999999999997" rx="1.40625" ry="1.40625" fill="#342a45"></rect>
+   <rect x="41.50088495575221" y="19.8" width="1.6991150442477878" height="8.399999999999999"
+      rx="1.40625" ry="1.40625" fill="#342a45"></rect>
+   <text x="4.800000000000001" y="24" fill="#ffffff" transform="rotate(-10 4.800000000000001 24)"
+      style="font: 13.2px SimpleNote;">Soul</text>
+   <text x="12" y="34.56" fill="#ffffff" transform="rotate(-10 12 34.56)"
+      style="font: 13.2px SimpleNote;">Beets</text>
+</svg>
