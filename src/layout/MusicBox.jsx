@@ -5,7 +5,7 @@ import RepeatOneIcon from "@mui/icons-material/RepeatOne";
 import PlaylistPlayIcon from "@mui/icons-material/PlaylistPlay";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { PlatformTag, QualityTag } from "@/components/source";
 
 export default function MusicBox() {
@@ -78,13 +78,7 @@ export default function MusicBox() {
             />
             <Box display="flex" flexDirection="column">
               <Box>与火星的孩子对话</Box>
-              <Box
-                fontSize="0.8em"
-                width="220px"
-                display="flex"
-                gap="4px"
-                alignItems="center"
-              >
+              <Box fontSize="0.8em" width="220px" display="flex" gap="4px" alignItems="center">
                 <Box>华晨宇</Box>
                 <Box>{PlatformTag("WYY")}</Box>
                 <Box>{QualityTag("WYY", "超清母带")}</Box>
@@ -96,14 +90,8 @@ export default function MusicBox() {
           <Zoom style={{ display: repeatShow ? "" : "none" }} in={repeatShow}>
             <RepeatIcon style={{ width: "24px" }} onClick={onClickModeIcon} />
           </Zoom>
-          <Zoom
-            style={{ display: repeatoneShow ? "" : "none" }}
-            in={repeatoneShow}
-          >
-            <RepeatOneIcon
-              style={{ width: "24px" }}
-              onClick={onClickModeIcon}
-            />
+          <Zoom style={{ display: repeatoneShow ? "" : "none" }} in={repeatoneShow}>
+            <RepeatOneIcon style={{ width: "24px" }} onClick={onClickModeIcon} />
           </Zoom>
           <Zoom style={{ display: shuffleShow ? "" : "none" }} in={shuffleShow}>
             <ShuffleIcon style={{ width: "24px" }} onClick={onClickModeIcon} />
