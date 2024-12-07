@@ -6,7 +6,8 @@ import PlaylistPlayIcon from "@mui/icons-material/PlaylistPlay";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import { useCallback, useEffect, useState } from "react";
-import { PlatformTag, QualityTag } from "@/components/source";
+import { PrimaryColor } from "@/components/source";
+import TextTag from "@/components/TextTag";
 
 export default function MusicBox() {
   // TODO: @bbangqian 添加播放 封面旋转的代码
@@ -77,11 +78,19 @@ export default function MusicBox() {
               height={32}
             />
             <Box display="flex" flexDirection="column">
-              <Box>与火星的孩子对话</Box>
-              <Box fontSize="0.8em" width="220px" display="flex" gap="4px" alignItems="center">
-                <Box>华晨宇</Box>
-                <Box>{PlatformTag("WYY")}</Box>
-                <Box>{QualityTag("WYY", "超清母带")}</Box>
+              <Box>富士山下</Box>
+              <Box
+                fontSize="0.8em"
+                width="220px"
+                display="flex"
+                gap="4px"
+                alignItems="center"
+              >
+                <Box>陈奕迅</Box>
+                <TextTag color={PrimaryColor("QQ")}>QQ</TextTag>
+                <TextTag color={PrimaryColor("QQ")} outline>
+                  臻品母带
+                </TextTag>
               </Box>
             </Box>
           </Box>
@@ -90,8 +99,14 @@ export default function MusicBox() {
           <Zoom style={{ display: repeatShow ? "" : "none" }} in={repeatShow}>
             <RepeatIcon style={{ width: "24px" }} onClick={onClickModeIcon} />
           </Zoom>
-          <Zoom style={{ display: repeatoneShow ? "" : "none" }} in={repeatoneShow}>
-            <RepeatOneIcon style={{ width: "24px" }} onClick={onClickModeIcon} />
+          <Zoom
+            style={{ display: repeatoneShow ? "" : "none" }}
+            in={repeatoneShow}
+          >
+            <RepeatOneIcon
+              style={{ width: "24px" }}
+              onClick={onClickModeIcon}
+            />
           </Zoom>
           <Zoom style={{ display: shuffleShow ? "" : "none" }} in={shuffleShow}>
             <ShuffleIcon style={{ width: "24px" }} onClick={onClickModeIcon} />

@@ -1,9 +1,7 @@
-import { Box, Chip } from "@mui/material";
-
 const sources = [
   {
     name: "QQ",
-    color: "#31C27C",
+    color: "#2caf6f",
     quality: ["臻品母带", "臻品音质", "臻品全景", "SQ", "HQ", "SQ"],
   },
   {
@@ -31,34 +29,16 @@ const sources = [
 ];
 const supports = sources.map((source) => source.name);
 
-const tagStyle = { color: "#ffffff", fontSize: "10px", padding: "2px 4px", maxWidth: "fit-content", borderRadius: 4 };
+export const Platform = (platform) => {
+  return supports.includes(platform) ? platform : "ETC";
+};
 
 export const Quality = (platform) => {
   if (!supports.includes(platform)) platform = "ETC";
   return sources.find((s) => s.name === platform).quality;
 };
 
-export const PlatformTag = (platform) => {
-  if (!supports.includes(platform)) platform = "ETC";
-  const color = sources.find((s) => s.name === platform).color;
-
-  return <div style={{ ...tagStyle, backgroundColor: color }}>{platform}</div>;
-};
-
-export const QualityTag = (platform, quality) => {
-  if (!supports.includes(platform)) platform = "ETC";
-  const color = sources.find((s) => s.name === platform).color;
-
-  return <div style={{ ...tagStyle, backgroundColor: color }}>{quality}</div>;
-};
-
-export const PlatformQualityTag = (platform, quality) => {
-  if (!supports.includes(platform)) platform = "ETC";
-  const color = sources.find((s) => s.name === platform).color;
-
-  return (
-    <div style={{ ...tagStyle, backgroundColor: color }}>
-      {platform + " " + quality}
-    </div>
-  );
+export const PrimaryColor = (platform) => {
+  platform = Platform(platform);
+  return sources.find((s) => s.name === platform).color;
 };

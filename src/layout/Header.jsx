@@ -1,21 +1,27 @@
-import { Box } from "@mui/material";
-import PropTypes from "prop-types";
-/**
- * @param {{component: import("react").ReactDOM}} props
- * @returns
- */
-export default function Header({ component }) {
+import { AppBar, Box } from "@mui/material";
+
+export default function Header({ children }) {
   return (
     <>
-      <Box display="flex" alignItems="center" gap="4px" padding="6px 12px" bgcolor="primary.main">
-        <img style={{ borderRadius: 8 }} src="/logo-512.png" width={32} height={32} />
-        <Box style={{ font: "normal 1.5em SimpleNote" }}>SoulBeets</Box>
-        <div>{component}</div>
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Box
+            display="flex"
+            alignItems="center"
+            gap="4px"
+            padding="6px 12px"
+            bgcolor="primary.main"
+          >
+            <Box
+              style={{ font: "normal 1.5em SimpleNote" }}
+              color="primary.contrastText"
+            >
+              SoulBeets
+            </Box>
+            <Box>{children}</Box>
+          </Box>
+        </AppBar>
       </Box>
     </>
   );
 }
-
-Header.propTypes = {
-  component: PropTypes.node,
-};
